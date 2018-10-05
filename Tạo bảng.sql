@@ -1,0 +1,143 @@
+﻿-- Tạo database
+CREATE DATABASE QuanLiThuVien
+GO
+
+
+
+USE QuanLiThuVien
+GO
+
+
+-- Tạo các bảng
+CREATE TABLE TheLoai
+(
+	MaTheLoai CHAR(10) PRIMARY KEY,
+	TenTheLoai NVARCHAR(50) NOT NULL
+)
+GO
+
+CREATE TABLE DauSach
+(
+	MaDauSach CHAR(10) PRIMARY KEY,
+	TenDauSach NVARCHAR(100),
+	MaTheLoai CHAR(10),
+	MaNXB CHAR(10)
+)
+GO
+
+CREATE TABLE NhaXuatBan
+(
+	MaNXB CHAR(10) PRIMARY KEY,
+	TenNXB NVARCHAR(100) NOT NULL,
+	DiaChi NVARCHAR(100)
+)
+GO
+
+CREATE TABLE VietSach
+(
+	MaDauSach CHAR(10) NOT NULL,
+	MaTacGia CHAR(10) NOT NULL,
+	SoTrang INT CHECK (SoTrang >= 0),
+	VaiTro NVARCHAR(50)
+	PRIMARY KEY (MaDauSach, MaTacGia)
+)
+GO
+
+CREATE TABLE TacGia
+(
+	MaTacGia CHAR(10) PRIMARY KEY,
+	TenTacGia NVARCHAR(100),
+	DiaChi NVARCHAR(100),
+	SDT CHAR(10)
+)
+GO
+
+CREATE TABLE CuonSach
+(
+	MaCuonSach CHAR(10) PRIMARY KEY,
+	TinhTrangSach INT CHECK (TinhTrangSach >= 0 AND TinhTrangSach <= 100),
+	MaDauSach CHAR(10),
+	MaKe CHAR(10)
+)
+GO
+
+CREATE TABLE KeSach
+(
+	MaKe CHAR(10) PRIMARY KEY,
+	ViTri NVARCHAR(50)
+)
+GO
+
+CREATE TABLE ThongTinMuonTra
+(
+	MaCuonSach CHAR(10) NOT NULL,
+	SoPhieuMuon CHAR(10) NOT NULL,
+	NgayTra DATE,
+	TinhTrangSach INT CHECK(TinhTrangSach >= 0 AND TinhTrangSach <= 100),
+	MaViPham CHAR(10),
+	PRIMARY KEY (MaCuonSach, SoPhieuMuon)
+)
+GO
+
+CREATE TABLE ViPham
+(
+	MaViPham CHAR(10) PRIMARY KEY,
+	TenViPham NVARCHAR(50) UNIQUE NOT NULL,
+	SoTienPhat DECIMAL(10, 0) DEFAULT 10000
+)
+GO
+
+CREATE TABLE NhanVien
+(
+	MaNhanVien CHAR(10) PRIMARY KEY,
+	HoTen NVARCHAR(50),
+	DiaChi NVARCHAR(50),
+	SDT CHAR(10)
+)
+GO
+
+CREATE TABLE PhieuMuon
+(
+	SoPhieuMuon CHAR(10) PRIMARY KEY,
+	NgayMuon DATE,
+	NgayHenTra DATE,
+	MaNhanVien CHAR(10),
+	MaDocGia CHAR(10)
+)
+GO
+
+CREATE TABLE DocGia
+(
+	MaDocGia CHAR(10) PRIMARY KEY,
+	TenDocGia NVARCHAR(50),
+	DiaChi NVARCHAR(50),
+	SDT CHAR(10)
+)
+GO
+
+CREATE TABLE TheThuVien
+(
+	SoThe CHAR(10) PRIMARY KEY,
+	NgayBatDau DATE,
+	NgayKetThuc DATE,
+	MaDocGia CHAR(10)
+)
+GO
+
+-- Set Foreign key
+ALTER TABLE VietSach ADD CONSTRAINT FK_VietSach_TG FOREIGN KEY (MaTacGia) REFERENCES TacGia (MaTacGia)
+ALTER TABLE VietSach ADD CONSTRAINT FK_VietSach_DauSach FOREIGN KEY (MaDauSach) REFERENCES DauSach (MaDauSach)
+ALTER TABLE DauSach ADD CONSTRAINT FK_DauSach_TheLoai FOREIGN KEY (MaTheLoai) REFERENCES TheLoai (MaTheLoai)
+ALTER TABLE DauSach ADD CONSTRAINT FK_DauSach_NXB FOREIGN KEY (MaNXB) REFERENCES NhaXuatBan (MaNXB)
+ALTER TABLE CuonSach ADD CONSTRAINT FK_CuonSach_KeSach FOREIGN KEY (MaKe) REFERENCES KeSach (MaKe)
+ALTER TABLE CuonSach ADD CONSTRAINT FK_CuonSach_DauSach FOREIGN KEY (MaDauSach) REFERENCES DauSach (MaDauSach)
+ALTER TABLE ThongTinMuonTra ADD CONSTRAINT FK_TT_CuonSach FOREIGN KEY (MaCuonSach) REFERENCES CuonSach (MaCuonSach)
+ALTER TABLE ThongTinMuonTra ADD CONSTRAINT FK_TT_ViPham FOREIGN KEY (MaViPham) REFERENCES ViPham (MaViPham)
+ALTER TABLE ThongTinMuonTra ADD CONSTRAINT FK_TT_PhieuMuon FOREIGN KEY (SoPhieuMuon) REFERENCES PhieuMuon (SoPhieuMuon)
+ALTER TABLE PhieuMuon ADD CONSTRAINT FK_PM_NhanVien FOREIGN KEY (MaNhanVien) REFERENCES NhanVien (MaNhanVien)
+ALTER TABLE PhieuMuon ADD CONSTRAINT FK_PM_DocGia FOREIGN KEY (MaDocGia) REFERENCES DocGia (MaDocGia)
+ALTER TABLE TheThuVien ADD CONSTRAINT FK_DocGia_TheThuVien FOREIGN KEY (MaDocGia) REFERENCES DocGia (MaDocGia)
+ 
+
+
+
