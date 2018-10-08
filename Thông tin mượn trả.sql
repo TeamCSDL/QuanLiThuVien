@@ -1,6 +1,7 @@
 USE QuanLiThuVien
 GO
 
+
 INSERT dbo.ThongTinMuonTra
         ( MaCuonSach ,
           SoPhieuMuon ,
@@ -144,7 +145,7 @@ INSERT dbo.ThongTinMuonTra
 VALUES  ( 'CS006' , -- MaCuonSach - char(10)
           'PM003' , -- SoPhieuMuon - char(10)
           NULL , -- NgayTra - date
-          NULL , -- TinhTrangSach - int
+          0, -- TinhTrangSach - int
           'VP015'  -- MaViPham - char(10)
         )
 
@@ -224,7 +225,7 @@ INSERT dbo.ThongTinMuonTra
 VALUES  ( 'CS004' , -- MaCuonSach - char(10)
           'PM007' , -- SoPhieuMuon - char(10)
           NULL , -- NgayTra - date
-          NULL , -- TinhTrangSach - int
+          0, -- TinhTrangSach - int
           'VP017'  -- MaViPham - char(10)
         )
 INSERT dbo.ThongTinMuonTra
@@ -263,7 +264,7 @@ INSERT dbo.ThongTinMuonTra
 VALUES  ( 'CS009' , -- MaCuonSach - char(10)
           'PM007' , -- SoPhieuMuon - char(10)
           NULL , -- NgayTra - date
-          NULL , -- TinhTrangSach - int
+          0, -- TinhTrangSach - int
           'VP013'  -- MaViPham - char(10)
         )
 
@@ -343,7 +344,7 @@ INSERT dbo.ThongTinMuonTra
 VALUES  ( 'CS010' , -- MaCuonSach - char(10)
           'PM004' , -- SoPhieuMuon - char(10)
           NULL , -- NgayTra - date
-          NULL , -- TinhTrangSach - int
+          0, -- TinhTrangSach - int
           'VP016'  -- MaViPham - char(10)
         )
 
@@ -475,7 +476,7 @@ INSERT dbo.ThongTinMuonTra
 VALUES  ( 'CS006' , -- MaCuonSach - char(10)
           'PM010' , -- SoPhieuMuon - char(10)
           NULL , -- NgayTra - date
-          NULL , -- TinhTrangSach - int
+          0, -- TinhTrangSach - int
           'VP018'  -- MaViPham - char(10)
         )
 INSERT dbo.ThongTinMuonTra
@@ -557,3 +558,390 @@ VALUES  ( 'CS009' , -- MaCuonSach - char(10)
           90 , -- TinhTrangSach - int
           NULL  -- MaViPham - char(10)
         )
+
+
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS010' , -- MaCuonSach - char(10)
+          'PM014' , -- SoPhieuMuon - char(10)
+          '20170801' , -- NgayTra - date
+          90 , -- TinhTrangSach - int
+          NULL  -- MaViPham - char(10)
+        )
+ 
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS012' , -- MaCuonSach - char(10)
+          'PM014' , -- SoPhieuMuon - char(10)
+          '20170801' , -- NgayTra - date
+          80 , -- TinhTrangSach - int
+          NULL  -- MaViPham - char(10)
+        )
+ 
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS001' , -- MaCuonSach - char(10)
+          'PM014' , -- SoPhieuMuon - char(10)
+          '20170801' , -- NgayTra - date
+          90 , -- TinhTrangSach - int
+          NULL  -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS013' , -- MaCuonSach - char(10)
+          'PM015' , -- SoPhieuMuon - char(10)
+          '20171017' , -- NgayTra - date
+          90 , -- TinhTrangSach - int
+          'VP020'  -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS015' , -- MaCuonSach - char(10)
+          'PM015' , -- SoPhieuMuon - char(10)
+          '20171017' , -- NgayTra - date
+          85 , -- TinhTrangSach - int
+          'VP020'  -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS002' , -- MaCuonSach - char(10)
+          'PM015' , -- SoPhieuMuon - char(10)
+          '20171017' , -- NgayTra - date
+          90 , -- TinhTrangSach - int
+          'VP020'  -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS004' , -- MaCuonSach - char(10)
+          'PM016' , -- SoPhieuMuon - char(10)
+          '20180214' , -- NgayTra - date
+          40 , -- TinhTrangSach - int
+          'VP009'  -- MaViPham - char(10)
+        )
+
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS006' , -- MaCuonSach - char(10)
+          'PM016' , -- SoPhieuMuon - char(10)
+          NULL , -- NgayTra - date
+          0, -- TinhTrangSach - int
+          'VP015'  -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS008' , -- MaCuonSach - char(10)
+          'PM016' , -- SoPhieuMuon - char(10)
+          '20180214' , -- NgayTra - date
+          90 , -- TinhTrangSach - int
+          NULL  -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS003' , -- MaCuonSach - char(10)
+          'PM017' , -- SoPhieuMuon - char(10)
+          '20171110' , -- NgayTra - date
+          85 , -- TinhTrangSach - int
+          NULL  -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS009' , -- MaCuonSach - char(10)
+          'PM017' , -- SoPhieuMuon - char(10)
+          '20171110' , -- NgayTra - date
+          90 , -- TinhTrangSach - int
+          NULL  -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS012' , -- MaCuonSach - char(10)
+          'PM017' , -- SoPhieuMuon - char(10)
+          '20171110' , -- NgayTra - date
+          85 , -- TinhTrangSach - int
+          NULL  -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS015' , -- MaCuonSach - char(10)
+          'PM017' , -- SoPhieuMuon - char(10)
+          '20171110' , -- NgayTra - date
+          95 , -- TinhTrangSach - int
+          NULL  -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS010' , -- MaCuonSach - char(10)
+          'PM018' , -- SoPhieuMuon - char(10)
+          '20170425' , -- NgayTra - date
+          85 , -- TinhTrangSach - int
+          'VP007'  -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS013' , -- MaCuonSach - char(10)
+          'PM018' , -- SoPhieuMuon - char(10)
+          '20170425' , -- NgayTra - date
+          90 , -- TinhTrangSach - int
+          NULL  -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS015' , -- MaCuonSach - char(10)
+          'PM019' , -- SoPhieuMuon - char(10)
+          '20170425' , -- NgayTra - date
+          85 , -- TinhTrangSach - int
+          NULL  -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS017' , -- MaCuonSach - char(10)
+          'PM018' , -- SoPhieuMuon - char(10)
+          '20170425' , -- NgayTra - date
+          90 , -- TinhTrangSach - int
+          NULL  -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS002' , -- MaCuonSach - char(10)
+          'PM019' , -- SoPhieuMuon - char(10)
+          NULL , -- NgayTra - date
+          0, -- TinhTrangSach - int
+          'VP014'  -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS002' , -- MaCuonSach - char(10)
+          'PM020' , -- SoPhieuMuon - char(10)
+          '20150318' , -- NgayTra - date
+          80 , -- TinhTrangSach - int
+          'VP002'  -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS014' , -- MaCuonSach - char(10)
+          'PM020' , -- SoPhieuMuon - char(10)
+          '20150318' , -- NgayTra - date
+          80 , -- TinhTrangSach - int
+          NULL  -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS015' , -- MaCuonSach - char(10)
+          'PM020' , -- SoPhieuMuon - char(10)
+          '20150318' , -- NgayTra - date
+          75 , -- TinhTrangSach - int
+          'VP004' -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS016' , -- MaCuonSach - char(10)
+          'PM021' , -- SoPhieuMuon - char(10)
+          '20180127' , -- NgayTra - date
+          80 , -- TinhTrangSach - int
+          'VP020'  -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS017' , -- MaCuonSach - char(10)
+          'PM021' , -- SoPhieuMuon - char(10)
+          '20180127' , -- NgayTra - date
+          90 , -- TinhTrangSach - int
+          'VP020'  -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS012' , -- MaCuonSach - char(10)
+          'PM021' , -- SoPhieuMuon - char(10)
+          '20180127' , -- NgayTra - date
+          90 , -- TinhTrangSach - int
+          'VP020'  -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS001' , -- MaCuonSach - char(10)
+          'PM022' , -- SoPhieuMuon - char(10)
+          '20171122' , -- NgayTra - date
+          90 , -- TinhTrangSach - int
+          NULL  -- MaViPham - char(10)
+        )
+
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS002' , -- MaCuonSach - char(10)
+          'PM022' , -- SoPhieuMuon - char(10)
+          '20171122' , -- NgayTra - date
+          90 , -- TinhTrangSach - int
+          NULL  -- MaViPham - char(10)
+        )
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS006' , -- MaCuonSach - char(10)
+          'PM022' , -- SoPhieuMuon - char(10)
+          '20171122' , -- NgayTra - date
+          80 , -- TinhTrangSach - int
+          NULL  -- MaViPham - char(10)
+        )
+
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS002' , -- MaCuonSach - char(10)
+          'PM023' , -- SoPhieuMuon - char(10)
+          '20180315' , -- NgayTra - date
+          90 , -- TinhTrangSach - int
+          'VP020'  -- MaViPham - char(10)
+        )
+
+
+INSERT dbo.ThongTinMuonTra
+        ( MaCuonSach ,
+          SoPhieuMuon ,
+          NgayTra ,
+          TinhTrangSach ,
+          MaViPham
+        )
+VALUES  ( 'CS010' , -- MaCuonSach - char(10)
+          'PM023' , -- SoPhieuMuon - char(10)
+          NULL , -- NgayTra - date
+          0, -- TinhTrangSach - int
+          'VP019'  -- MaViPham - char(10)
+        )
+ 
